@@ -14,6 +14,13 @@
 		BF1A533D2BFF0F30004F0B6B /* Idle_ClickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1A533C2BFF0F30004F0B6B /* Idle_ClickerTests.swift */; };
 		BF1A53472BFF0F30004F0B6B /* Idle_ClickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1A53462BFF0F30004F0B6B /* Idle_ClickerUITests.swift */; };
 		BF1A53492BFF0F30004F0B6B /* Idle_ClickerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1A53482BFF0F30004F0B6B /* Idle_ClickerUITestsLaunchTests.swift */; };
+		BF1A53572BFF1035004F0B6B /* PointGeneratorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1A53562BFF1035004F0B6B /* PointGeneratorData.swift */; };
+		BF1A53592BFF10CA004F0B6B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1A53582BFF10CA004F0B6B /* DataManager.swift */; };
+		BF1A535B2BFF1319004F0B6B /* ClickPowerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1A535A2BFF1319004F0B6B /* ClickPowerData.swift */; };
+		BF1A535D2BFF13B6004F0B6B /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1A535C2BFF13B6004F0B6B /* GameState.swift */; };
+		BF1A535F2BFF168C004F0B6B /* UserGameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1A535E2BFF168C004F0B6B /* UserGameData.swift */; };
+		BF3159422C008BD60098AA63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3159412C008BD60098AA63 /* AppDelegate.swift */; };
+		BF3159452C0091740098AA63 /* ClickButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3159442C0091740098AA63 /* ClickButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +51,13 @@
 		BF1A53422BFF0F30004F0B6B /* Idle ClickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Idle ClickerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF1A53462BFF0F30004F0B6B /* Idle_ClickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Idle_ClickerUITests.swift; sourceTree = "<group>"; };
 		BF1A53482BFF0F30004F0B6B /* Idle_ClickerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Idle_ClickerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BF1A53562BFF1035004F0B6B /* PointGeneratorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointGeneratorData.swift; sourceTree = "<group>"; };
+		BF1A53582BFF10CA004F0B6B /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		BF1A535A2BFF1319004F0B6B /* ClickPowerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickPowerData.swift; sourceTree = "<group>"; };
+		BF1A535C2BFF13B6004F0B6B /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		BF1A535E2BFF168C004F0B6B /* UserGameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGameData.swift; sourceTree = "<group>"; };
+		BF3159412C008BD60098AA63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BF3159442C0091740098AA63 /* ClickButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +92,7 @@
 				BF1A533B2BFF0F30004F0B6B /* Idle ClickerTests */,
 				BF1A53452BFF0F30004F0B6B /* Idle ClickerUITests */,
 				BF1A53292BFF0F2F004F0B6B /* Products */,
+				BF31593A2BFF6D230098AA63 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +109,8 @@
 		BF1A532A2BFF0F2F004F0B6B /* Idle Clicker */ = {
 			isa = PBXGroup;
 			children = (
+				BF3159432C00915C0098AA63 /* CustomStyle */,
+				BF1A53552BFF101C004F0B6B /* Models */,
 				BF1A532B2BFF0F2F004F0B6B /* Idle_ClickerApp.swift */,
 				BF1A532D2BFF0F2F004F0B6B /* ContentView.swift */,
 				BF1A532F2BFF0F30004F0B6B /* Assets.xcassets */,
@@ -125,6 +142,34 @@
 				BF1A53482BFF0F30004F0B6B /* Idle_ClickerUITestsLaunchTests.swift */,
 			);
 			path = "Idle ClickerUITests";
+			sourceTree = "<group>";
+		};
+		BF1A53552BFF101C004F0B6B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BF1A53562BFF1035004F0B6B /* PointGeneratorData.swift */,
+				BF1A53582BFF10CA004F0B6B /* DataManager.swift */,
+				BF1A535A2BFF1319004F0B6B /* ClickPowerData.swift */,
+				BF1A535C2BFF13B6004F0B6B /* GameState.swift */,
+				BF1A535E2BFF168C004F0B6B /* UserGameData.swift */,
+				BF3159412C008BD60098AA63 /* AppDelegate.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BF31593A2BFF6D230098AA63 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF3159432C00915C0098AA63 /* CustomStyle */ = {
+			isa = PBXGroup;
+			children = (
+				BF3159442C0091740098AA63 /* ClickButtonStyle.swift */,
+			);
+			path = CustomStyle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +302,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF3159422C008BD60098AA63 /* AppDelegate.swift in Sources */,
+				BF1A53572BFF1035004F0B6B /* PointGeneratorData.swift in Sources */,
+				BF1A53592BFF10CA004F0B6B /* DataManager.swift in Sources */,
+				BF3159452C0091740098AA63 /* ClickButtonStyle.swift in Sources */,
 				BF1A532E2BFF0F2F004F0B6B /* ContentView.swift in Sources */,
+				BF1A535D2BFF13B6004F0B6B /* GameState.swift in Sources */,
+				BF1A535F2BFF168C004F0B6B /* UserGameData.swift in Sources */,
+				BF1A535B2BFF1319004F0B6B /* ClickPowerData.swift in Sources */,
 				BF1A532C2BFF0F2F004F0B6B /* Idle_ClickerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,7 +486,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Louie.Idle-Clicker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -463,7 +515,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Louie.Idle-Clicker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
