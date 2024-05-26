@@ -21,6 +21,12 @@
 		BF1A535F2BFF168C004F0B6B /* UserGameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1A535E2BFF168C004F0B6B /* UserGameData.swift */; };
 		BF3159422C008BD60098AA63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3159412C008BD60098AA63 /* AppDelegate.swift */; };
 		BF3159452C0091740098AA63 /* ClickButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3159442C0091740098AA63 /* ClickButtonStyle.swift */; };
+		BFA327D62C0216E100436576 /* PointGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA327D52C0216E100436576 /* PointGeneratorView.swift */; };
+		BFA327D82C021F1900436576 /* CustomUpgradeButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA327D72C021F1900436576 /* CustomUpgradeButtonStyle.swift */; };
+		BFA327DA2C030FAC00436576 /* LargeNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA327D92C030FAC00436576 /* LargeNumber.swift */; };
+		BFA327DD2C03423C00436576 /* MilestoneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA327DC2C03423C00436576 /* MilestoneManager.swift */; };
+		BFA327DF2C0352D400436576 /* MilestonesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA327DE2C0352D400436576 /* MilestonesView.swift */; };
+		BFA327E12C03610E00436576 /* CustomProgressBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA327E02C03610E00436576 /* CustomProgressBarStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +64,12 @@
 		BF1A535E2BFF168C004F0B6B /* UserGameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGameData.swift; sourceTree = "<group>"; };
 		BF3159412C008BD60098AA63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF3159442C0091740098AA63 /* ClickButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickButtonStyle.swift; sourceTree = "<group>"; };
+		BFA327D52C0216E100436576 /* PointGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointGeneratorView.swift; sourceTree = "<group>"; };
+		BFA327D72C021F1900436576 /* CustomUpgradeButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUpgradeButtonStyle.swift; sourceTree = "<group>"; };
+		BFA327D92C030FAC00436576 /* LargeNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeNumber.swift; sourceTree = "<group>"; };
+		BFA327DC2C03423C00436576 /* MilestoneManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneManager.swift; sourceTree = "<group>"; };
+		BFA327DE2C0352D400436576 /* MilestonesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestonesView.swift; sourceTree = "<group>"; };
+		BFA327E02C03610E00436576 /* CustomProgressBarStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressBarStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +121,7 @@
 		BF1A532A2BFF0F2F004F0B6B /* Idle Clicker */ = {
 			isa = PBXGroup;
 			children = (
+				BFA327D42C0216CA00436576 /* CustomUI */,
 				BF3159432C00915C0098AA63 /* CustomStyle */,
 				BF1A53552BFF101C004F0B6B /* Models */,
 				BF1A532B2BFF0F2F004F0B6B /* Idle_ClickerApp.swift */,
@@ -147,11 +160,8 @@
 		BF1A53552BFF101C004F0B6B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BF1A53562BFF1035004F0B6B /* PointGeneratorData.swift */,
-				BF1A53582BFF10CA004F0B6B /* DataManager.swift */,
-				BF1A535A2BFF1319004F0B6B /* ClickPowerData.swift */,
+				BF3159462C009C5D0098AA63 /* DataModels */,
 				BF1A535C2BFF13B6004F0B6B /* GameState.swift */,
-				BF1A535E2BFF168C004F0B6B /* UserGameData.swift */,
 				BF3159412C008BD60098AA63 /* AppDelegate.swift */,
 			);
 			path = Models;
@@ -168,8 +178,40 @@
 			isa = PBXGroup;
 			children = (
 				BF3159442C0091740098AA63 /* ClickButtonStyle.swift */,
+				BFA327D72C021F1900436576 /* CustomUpgradeButtonStyle.swift */,
+				BFA327E02C03610E00436576 /* CustomProgressBarStyle.swift */,
 			);
 			path = CustomStyle;
+			sourceTree = "<group>";
+		};
+		BF3159462C009C5D0098AA63 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				BF1A53582BFF10CA004F0B6B /* DataManager.swift */,
+				BF1A53562BFF1035004F0B6B /* PointGeneratorData.swift */,
+				BF1A535A2BFF1319004F0B6B /* ClickPowerData.swift */,
+				BFA327DB2C03422200436576 /* AllUserData */,
+				BFA327D92C030FAC00436576 /* LargeNumber.swift */,
+			);
+			path = DataModels;
+			sourceTree = "<group>";
+		};
+		BFA327D42C0216CA00436576 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				BFA327D52C0216E100436576 /* PointGeneratorView.swift */,
+				BFA327DE2C0352D400436576 /* MilestonesView.swift */,
+			);
+			path = CustomUI;
+			sourceTree = "<group>";
+		};
+		BFA327DB2C03422200436576 /* AllUserData */ = {
+			isa = PBXGroup;
+			children = (
+				BF1A535E2BFF168C004F0B6B /* UserGameData.swift */,
+				BFA327DC2C03423C00436576 /* MilestoneManager.swift */,
+			);
+			path = AllUserData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,14 +345,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF3159422C008BD60098AA63 /* AppDelegate.swift in Sources */,
+				BFA327D62C0216E100436576 /* PointGeneratorView.swift in Sources */,
 				BF1A53572BFF1035004F0B6B /* PointGeneratorData.swift in Sources */,
 				BF1A53592BFF10CA004F0B6B /* DataManager.swift in Sources */,
 				BF3159452C0091740098AA63 /* ClickButtonStyle.swift in Sources */,
 				BF1A532E2BFF0F2F004F0B6B /* ContentView.swift in Sources */,
+				BFA327E12C03610E00436576 /* CustomProgressBarStyle.swift in Sources */,
 				BF1A535D2BFF13B6004F0B6B /* GameState.swift in Sources */,
 				BF1A535F2BFF168C004F0B6B /* UserGameData.swift in Sources */,
+				BFA327DA2C030FAC00436576 /* LargeNumber.swift in Sources */,
 				BF1A535B2BFF1319004F0B6B /* ClickPowerData.swift in Sources */,
+				BFA327D82C021F1900436576 /* CustomUpgradeButtonStyle.swift in Sources */,
+				BFA327DD2C03423C00436576 /* MilestoneManager.swift in Sources */,
 				BF1A532C2BFF0F2F004F0B6B /* Idle_ClickerApp.swift in Sources */,
+				BFA327DF2C0352D400436576 /* MilestonesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,7 +520,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Idle Clicker/Preview Content\"";
 				DEVELOPMENT_TEAM = VANB25GJJC;
 				ENABLE_PREVIEWS = YES;
@@ -501,7 +549,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Idle Clicker/Preview Content\"";
 				DEVELOPMENT_TEAM = VANB25GJJC;
 				ENABLE_PREVIEWS = YES;

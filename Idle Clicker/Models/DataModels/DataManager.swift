@@ -14,6 +14,7 @@ class DataManager {
     private let clickPowerKey = "clickPower"
     private let userGameDataKey = "userGameData"
     private let lastActiveTimestampKey = "lastActiveTimestamp"
+    private let milestonesKey = "milestones"
     
     // Save PointGenerators
     func savePointGenerators(_ pointGenerators: [PointGeneratorData]) {
@@ -112,19 +113,26 @@ class DataManager {
         return lastActiveDate
     }
     
-    // Calculate points for the elapsed time while the app was inactive
-    /*func calculateElapsedTimePoints(for userGameData: inout UserGameData) {
-        guard let lastActiveDate = UserDefaults.standard.object(forKey: lastActiveTimestampKey) as? Date else {
-            print("No valid last active timestamp found")
-            return
+    func saveMilestones(_ milestones: [MilestoneManager]) {
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(milestones) {
+            UserDefaults.standard.set(encoded, forKey: milestonesKey)
         }
-        
-        let currentDate = Date()
-        let elapsedTime = currentDate.timeIntervalSince(lastActiveDate)
-        let elapsedPoints = Int(elapsedTime) * userGameData.userPointsPerSecond
-        userGameData.userPoints += elapsedPoints
-        print("Elapsed time: \(elapsedTime) seconds")
-        print("Elapsed points: \(elapsedPoints)")
-        print("New user points: \(userGameData.userPoints)")
-    }*/
+    }
+    
+    func loadMilestones() -> [MilestoneManager] {
+        if let savedData = UserDefaults.standard.data(forKey: milestonesKey) {
+            let decoder = JSONDecoder()
+            do {
+                let loadedMilestones = try
+                decoder.decode([MilestoneManager].self, from: savedData)
+                print("Milestones loaded")
+                return loadedMilestones
+            } catch {
+                print("Failed to load milestones")
+            }
+        }
+        return[]
+    }
+   
 }

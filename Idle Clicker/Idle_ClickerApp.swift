@@ -16,6 +16,10 @@ struct Idle_ClickerApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(gameState)
+                .preferredColorScheme(.light)
+                .onAppear{
+                    setupObservers()
+                }
         }
         .onChange(of: scenePhase) { newScenePhase in
             switch newScenePhase {
@@ -25,7 +29,7 @@ struct Idle_ClickerApp: App {
             case .inactive:
                 print("App is inactive")
                 //gameState.saveLastActiveDate()
-                gameState.saveGameState()
+               // gameState.saveGameState()
             case .background:
                 print("App is in background")
                 gameState.saveLastActiveDate()
@@ -35,5 +39,25 @@ struct Idle_ClickerApp: App {
             }
         }
         
+        
+    }
+    private func setupObservers() {
+        NotificationCenter.default.addObserver(forName: UIApplication.didEnterBackgroundNotification, object: nil, queue: .main) { _ in
+            print("App did enter background")
+            gameState.saveLastActiveDate()
+            gameState.saveGameState()
+        }
+        
+        NotificationCenter.default.addObserver(forName: UIApplication.willResignActiveNotification, object: nil, queue: .main) { _ in
+            print("App will resign active")
+            gameState.saveLastActiveDate()
+            gameState.saveGameState()
+        }
+        
+        NotificationCenter.default.addObserver(forName: UIApplication.willTerminateNotification, object: nil, queue: .main) { _ in
+            print("App will terminate")
+            gameState.saveLastActiveDate()
+            gameState.saveGameState()
+        }
     }
 }

@@ -7,12 +7,15 @@
 
 import SwiftUI
 
-struct CustomUpgradeButtonStyle: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct CustomUpgradeButtonStyle: ButtonStyle {
+    
+    
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .frame(width: 80, height: 80)
+            .background(Color("CustomGrey"))
+            .cornerRadius(10)
     }
 }
 
-#Preview {
-    CustomUpgradeButtonStyle()
-}
+
