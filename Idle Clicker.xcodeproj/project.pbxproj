@@ -27,6 +27,9 @@
 		BFA327DD2C03423C00436576 /* MilestoneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA327DC2C03423C00436576 /* MilestoneManager.swift */; };
 		BFA327DF2C0352D400436576 /* MilestonesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA327DE2C0352D400436576 /* MilestonesView.swift */; };
 		BFA327E12C03610E00436576 /* CustomProgressBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA327E02C03610E00436576 /* CustomProgressBarStyle.swift */; };
+		BFA327E42C03D79A00436576 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA327E32C03D79A00436576 /* MainView.swift */; };
+		BFA327E62C03D7ED00436576 /* ProgressionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA327E52C03D7ED00436576 /* ProgressionView.swift */; };
+		BFA327E82C03D7FA00436576 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA327E72C03D7FA00436576 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +73,9 @@
 		BFA327DC2C03423C00436576 /* MilestoneManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneManager.swift; sourceTree = "<group>"; };
 		BFA327DE2C0352D400436576 /* MilestonesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestonesView.swift; sourceTree = "<group>"; };
 		BFA327E02C03610E00436576 /* CustomProgressBarStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressBarStyle.swift; sourceTree = "<group>"; };
+		BFA327E32C03D79A00436576 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		BFA327E52C03D7ED00436576 /* ProgressionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressionView.swift; sourceTree = "<group>"; };
+		BFA327E72C03D7FA00436576 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +131,7 @@
 				BF3159432C00915C0098AA63 /* CustomStyle */,
 				BF1A53552BFF101C004F0B6B /* Models */,
 				BF1A532B2BFF0F2F004F0B6B /* Idle_ClickerApp.swift */,
-				BF1A532D2BFF0F2F004F0B6B /* ContentView.swift */,
+				BFA327E22C03D76800436576 /* Views */,
 				BF1A532F2BFF0F30004F0B6B /* Assets.xcassets */,
 				BF1A53312BFF0F30004F0B6B /* Preview Content */,
 			);
@@ -212,6 +218,25 @@
 				BFA327DC2C03423C00436576 /* MilestoneManager.swift */,
 			);
 			path = AllUserData;
+			sourceTree = "<group>";
+		};
+		BFA327E22C03D76800436576 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BF1A532D2BFF0F2F004F0B6B /* ContentView.swift */,
+				BFA327ED2C040AC700436576 /* ChildViews */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BFA327ED2C040AC700436576 /* ChildViews */ = {
+			isa = PBXGroup;
+			children = (
+				BFA327E52C03D7ED00436576 /* ProgressionView.swift */,
+				BFA327E32C03D79A00436576 /* MainView.swift */,
+				BFA327E72C03D7FA00436576 /* SettingsView.swift */,
+			);
+			path = ChildViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,12 +372,15 @@
 				BF3159422C008BD60098AA63 /* AppDelegate.swift in Sources */,
 				BFA327D62C0216E100436576 /* PointGeneratorView.swift in Sources */,
 				BF1A53572BFF1035004F0B6B /* PointGeneratorData.swift in Sources */,
+				BFA327E82C03D7FA00436576 /* SettingsView.swift in Sources */,
 				BF1A53592BFF10CA004F0B6B /* DataManager.swift in Sources */,
 				BF3159452C0091740098AA63 /* ClickButtonStyle.swift in Sources */,
 				BF1A532E2BFF0F2F004F0B6B /* ContentView.swift in Sources */,
 				BFA327E12C03610E00436576 /* CustomProgressBarStyle.swift in Sources */,
 				BF1A535D2BFF13B6004F0B6B /* GameState.swift in Sources */,
+				BFA327E62C03D7ED00436576 /* ProgressionView.swift in Sources */,
 				BF1A535F2BFF168C004F0B6B /* UserGameData.swift in Sources */,
+				BFA327E42C03D79A00436576 /* MainView.swift in Sources */,
 				BFA327DA2C030FAC00436576 /* LargeNumber.swift in Sources */,
 				BF1A535B2BFF1319004F0B6B /* ClickPowerData.swift in Sources */,
 				BFA327D82C021F1900436576 /* CustomUpgradeButtonStyle.swift in Sources */,

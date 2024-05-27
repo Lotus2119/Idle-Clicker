@@ -25,6 +25,8 @@ struct MilestonesView: View {
                 .ignoresSafeArea(.all)
             VStack(alignment: .leading, spacing: 10) {
                 Text("Milestone level \(milestones.milestoneLevel)")
+                    .fontWeight(.heavy)
+                    .font(.headline)
                 
                 ProgressView(value: progress)
                     .progressViewStyle(CustomProgressBarStyle())

@@ -1,19 +1,19 @@
 //
-//  ContentView.swift
+//  MainView.swift
 //  Idle Clicker
 //
-//  Created by Louis Kolodzinski on 23/05/2024.
+//  Created by Louis Kolodzinski on 27/05/2024.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct MainView: View {
     @EnvironmentObject var gameState: GameState
+    
     var body: some View {
         ZStack {
             Color("CustomBlue")
                 .ignoresSafeArea(.all)
-            
             
             VStack {
                 Text("Points: \(gameState.userGameData.userPoints.description)")
@@ -24,7 +24,8 @@ struct ContentView: View {
                     .fontDesign(.monospaced)
                     .fontWeight(.heavy)
                     .foregroundColor(.white)
-                HStack{
+                
+                HStack {
                     Text("+\(gameState.userGameData.userPointsPerSecond) PPS")
                         .font(.subheadline)
                         .foregroundStyle(.white)
@@ -36,6 +37,7 @@ struct ContentView: View {
                         .fontWeight(.bold)
                         .fontDesign(.rounded)
                 }
+                
                 Button(action: {
                     gameState.click()
                 }) {
@@ -48,7 +50,7 @@ struct ContentView: View {
                         .environmentObject(gameState)
                 }
                 
-                HStack{
+                HStack {
                     Button(action: {
                         gameState.userGameData.userPoints.add(1000000000000000000)
                     }) {
@@ -56,40 +58,39 @@ struct ContentView: View {
                     }
                     .buttonStyle(BorderedButtonStyle())
                     
-                    
                     Button(action: {
                         gameState.resetAllGameData()
                     }) {
                         Text("debug - reset data")
                     }
                     .buttonStyle(BorderedButtonStyle())
-                    
                 }
-            
                 
-                
+                // Make the ScrollView take up remaining space
                 ScrollView {
                     VStack(spacing: 5) {
                         ForEach(gameState.pointsGenerators) { generator in
                             PointGeneratorView(generator: generator)
                                 .environmentObject(gameState)
-                                .onAppear{
+                                .onAppear {
                                     print("PointGeneratorView for \(generator.genName) appeared with points \(gameState.userGameData.userPoints)")
                                 }
                         }
                     }
+                    .padding(.bottom, 20) // Optional: Add some padding at the bottom if needed
                 }
-               
+                
             }
             .padding()
             .onAppear {
                 print("ContentView appeared")
             }
         }
+        
     }
 }
 
 #Preview {
-    ContentView()
+    MainView()
         .environmentObject(GameState())
 }

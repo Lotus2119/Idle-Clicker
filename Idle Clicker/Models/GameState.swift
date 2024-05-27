@@ -215,8 +215,11 @@ class GameState: ObservableObject {
     }
     
     
+    }
+    
+    
       
         
-    }
+    
     
 
